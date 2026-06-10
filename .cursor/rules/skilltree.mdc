@@ -1,0 +1,41 @@
+---
+description: Skill Tree App conventions and anti-creep rules
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Skill Tree App Rules
+
+## Life and soul
+
+- **No hallucination:** verify code paths exist before referencing them; LLM output must pass schema validation
+- **Bones first:** do not add UI polish before lock/schema/validation bones are solid
+- **Notes required:** new modules need `NOTES.md` or an entry in `docs/NOTES/`; functions need docstrings
+- **Commit cadence:** prefer small commits; see `docs/COMMIT_CADENCE.md`
+
+## Stack
+
+- Backend: Python + FastAPI in `backend/`
+- Frontend: Expo + Expo Router in `frontend/`
+- JSON contract: `schemas/skill-tree.schema.json`
+
+## Anti-creep enforcement
+
+- Nodes with `tier >= 2` must stay locked until all `prerequisites` have `tested: true`
+- Never bypass lock logic in UI — greyed nodes use `pointerEvents: 'none'`
+- PEMDAS scope: no auth, no multi-project UI, no NL input from frontend yet
+
+## File ownership
+
+- LLM prompts/validation: `backend/app/llm/`
+- API routes: `backend/app/main.py`
+- Skill tree UI: `frontend/components/`
+- State: `frontend/store/useSkillTreeStore.ts`
+- Golden fixture: `fixtures/pemdas-tree.json` (must pass schema validation)
+
+## Conventions
+
+- Match existing naming: `SkillNode`, `SkillTreeCanvas`, `useSkillTreeStore`
+- RPG visual tokens live in `frontend/theme/tokens.ts`
+- Schema changes require updating Pydantic models and TypeScript types together
