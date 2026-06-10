@@ -9,7 +9,7 @@ A project management tool that turns natural-language ideas into strict, visual,
 - **Notes everywhere** — see [docs/NOTES/](docs/NOTES/) and per-folder `NOTES.md`
 - **Commit often** — [docs/COMMIT_CADENCE.md](docs/COMMIT_CADENCE.md)
 
-Full principles: [docs/PHILOSOPHY.md](docs/PHILOSOPHY.md)
+Full principles: [docs/PHILOSOPHY.md](docs/PHILOSOPHY.md) · Bones checklist: [docs/BONES.md](docs/BONES.md)
 
 ## PEMDAS MVP Status
 

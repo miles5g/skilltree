@@ -7,6 +7,7 @@ Every major block in Skill Tree has a dedicated notes file. Read these before ch
 | Doc | Purpose |
 |-----|---------|
 | [../PHILOSOPHY.md](../PHILOSOPHY.md) | No hallucination, bones first, notes everywhere |
+| [../BONES.md](../BONES.md) | Checklist of what must exist before polish |
 | [../COMMIT_CADENCE.md](../COMMIT_CADENCE.md) | How and when to commit/push |
 | [../PEMDAS.md](../PEMDAS.md) | MVP win conditions |
 
