@@ -1,0 +1,57 @@
+{
+  "project": "Build the Skill Tree App (Anti-Creep Engine)",
+  "branches": [
+    {
+      "id": "ai",
+      "name": "AI Logic",
+      "nodes": [
+        {
+          "id": "ai-l1-engine",
+          "tier": 1,
+          "title": "LLM JSON Engine",
+          "instruction": "Write a Python script that sends a hardcoded app concept to an LLM with strict instructions to return a parseable JSON skill tree with 3 Level-1 steps and 1 Level-2 step.",
+          "prerequisites": [],
+          "tested": false,
+          "x": 200,
+          "y": 80
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "name": "Visual Graphing",
+      "nodes": [
+        {
+          "id": "ui-l1-canvas",
+          "tier": 1,
+          "title": "SVG Skill Canvas",
+          "instruction": "Use react-native-svg to draw three static circles connected by lines on the skill tree canvas.",
+          "prerequisites": [],
+          "tested": false,
+          "x": 80,
+          "y": 220
+        },
+        {
+          "id": "ui-l1-lock",
+          "tier": 1,
+          "title": "Node Lock State",
+          "instruction": "Grey out the bottom circle and add a functional Tested & Working checkbox on the top circle that unlocks the child node.",
+          "prerequisites": ["ui-l1-canvas"],
+          "tested": false,
+          "x": 320,
+          "y": 220
+        },
+        {
+          "id": "ui-l2-integration",
+          "tier": 2,
+          "title": "Boss Fight Integration",
+          "instruction": "Connect the LLM JSON output to the canvas: dynamically render parent and child nodes from fixture JSON; parent unlocks child when tested.",
+          "prerequisites": ["ai-l1-engine", "ui-l1-lock"],
+          "tested": false,
+          "x": 200,
+          "y": 380
+        }
+      ]
+    }
+  ]
+}
