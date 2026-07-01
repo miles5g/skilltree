@@ -42,3 +42,7 @@ Use this before adding any new feature. If the bone is missing, build it first.
 - [ ] Server-side progress sync
 - [ ] Auto-layout for large trees
 - [ ] App Store build
+
+## Build discipline
+
+**One step at a time.** Ship a single bone, verify it, commit, then move on. Do not stack UI features (e.g. NL input + new layout) in one pass.
